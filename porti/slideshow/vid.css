@@ -1,0 +1,63 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+background-color: blue;
+}
+
+.container{
+width: 100%;
+height: 100vh;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+padding-bottom: 550px;
+
+
+}
+
+.container .slider{
+position: absolute;
+top: 50%; /* Posicionamento vertical no meio */
+left: 50%;  /* Posicionamento horizontal no meio */
+width: 100%;
+height: 100%;
+transform: translate(-50%, -50%); /* Centralização absoluta */
+max-width: 100%; /* Garante que o vídeo não ultrapasse a largura do contêiner */
+}
+
+.container ul{
+position: relative;
+bottom: -200px;
+left: 76% ;
+transform: translateX(-90%);
+
+justify-content: center;
+align-items: center;
+z-index: 20;
+}
+
+.container ul li{
+list-style: none;
+cursor: pointer;
+margin: 10px;
+}
+
+
+.container ul li video{
+    width: 200px;
+    height: auto;
+    transition:  0.3s;
+}
+
+
+
+.container ul li video:hover{
+    transition: scale (1.1);
+}
+
+video{
+width: 100%;
+height: 100%;
+}

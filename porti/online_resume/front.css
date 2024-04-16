@@ -1,0 +1,91 @@
+@keyframes borderAnimation {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: calc(100% - 70px); /* Ajuste conforme necessário para acompanhar a borda */
+    }
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif; 
+    padding: 0 25px;
+    border: 35px solid #ce0cdf2f; /* Adiciona uma borda de 10 pixels sólida preta */
+    position: relative; /* Necessário para posicionar o elemento de animação */
+    color: #f0f0f0;
+    background-image: url('src/Void\ Design.gif'); /* Define a imagem de fundo */
+    background-size: cover; /* Garante que a imagem cubra todo o fundo */
+  }
+  
+  .container {
+    background-color:(0, 0, 0, 0.5); /* Define um fundo transparente com uma opacidade */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    animation: borderAnimation 5s linear infinite; /* Aplica a animação à borda */
+    
+  }
+  
+  .bola {
+    position: absolute; /* Necessário para posicionar a bola dentro da borda */
+    width: 20px; /* Ajuste conforme necessário */
+    height: 20px; /* Ajuste conforme necessário */
+    background-color: #ee189c; /* Cor da bola */
+    border-radius: 50%; /* Faz a bola ser circular */
+    top: calc(50% - 10px); /* Centraliza verticalmente */
+    left: 0; /* Começa na borda esquerda */
+    animation: borderAnimation 5s linear infinite; /* Aplica a mesma animação à bola */
+  }
+  .card {
+    background-color: rgba(45, 4, 192, 0.301); /* Define um fundo transparente com uma opacidade */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(3, 26, 153, 0.26);
+    overflow: hidden;
+    width: 300px;
+    margin-right: 10px; /* Adiciona uma margem à direita para separar os cards */
+}
+
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #160894;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .card-content h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #e20b77;
+  }
+  
+  .card-content p {
+    color: #0aaddf;
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ee189c;
+    color: #fcfffe;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  .galeria.xml {
+    min-height: 300px; /* Ajuste a altura mínima conforme necessário */
+}
+.projeto-item img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}

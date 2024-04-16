@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Design</title>
+    <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="vid.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css"> <!-- Arquivo CSS com estilos gerais -->
+    <link rel="stylesheet" href="designer.css"> <!-- Novo arquivo CSS para estilos do formulário de solicitação de design -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Inicialização do Slick Carousel
+            $('.container-carousel').slick({
+                infinite: true,
+                slidesToShow: 3, // Quantidade de slides visíveis ao mesmo tempo
+                slidesToScroll: 3, // Quantidade de slides a rolar por vez
+                prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+                nextArrow: '<button type="button" class="slick-next">Next</button>',
+                responsive: [
+                    {
+                        breakpoint: 768, // Define o ponto de quebra para telas menores
+                        settings: {
+                            slidesToShow: 2 // Altera a quantidade de slides visíveis para telas menores
+                        }
+                    },
+                    {
+                        breakpoint: 480, // Define o ponto de quebra para telas ainda menores
+                        settings: {
+                            slidesToShow: 1 // Altera a quantidade de slides visíveis para telas ainda menores
+                        }
+                    }
+                ]
+            });
+
+            // Adiciona evento de clique para expandir a imagem
+            var images = document.querySelectorAll(".project-info img");
+            images.forEach(function(image) {
+                image.addEventListener("click", function() {
+                    this.classList.toggle("expanded");
+                });
+            });
+        });
+
+        function toggleForm() {
+            var form = document.getElementById("designForm");
+            form.style.display = form.style.display === "none" ? "block" : "none";
+        }
+    </script>
+</head>
+<body class="main">
+    <header>
+        <h1>Portfólio de Design</h1>
+    </header>
+
+    <main>
+    <div class="container-carousel">
+        <div class="project">
+            <div class="project-info">
+                <h2>Projeto 1</h2>
+                <p>Desenvolvido para um site de adm</p>
+                <img src="img/woman.png" alt="Imagem 2">
+            </div>
+        </div>
+        <div class="project">
+            <div class="project-info">
+                <h2>Projeto 2</h2>
+                <p>Criação de uma capa de livro</p>
+                <img src="img/ArtPresentation.png" alt="Imagem 2">
+        </div>
+    </div>
+    <div class="project">
+        <div class="project-info">
+            <h2>Projeto 3</h2>
+            <p>Logo para um aplicativo</p>
+            <img src="img/logo.png" alt="Imagem 2">
+    </div>
+</div>
+<div class="project">
+    <div class="project-info">
+        <h2>Projeto 4</h2>
+        <p>Este foi por livre espontânea vontade</p>
+        <img src="img/Gold Black Modern.png" alt="Imagem 2">
+</div>
+</div>
+<div class="project">
+    <div class="project-info">
+        <h2>Projeto 5</h2>
+        <p>Criação de um banner Pró-vida </p>
+        <img src="img/provida.png" alt="Imagem 2">
+</div>
+</div>
+<div class="project">
+    <div class="project-info">
+        <h2>Projeto 6</h2>
+        <p>Comercial CacauShow</p>
+        <img src="img/cacau.png" alt="Imagem 2">
+</div>            
+</div>
+
+ <div class="project">
+            <div class="project-info">
+                <h2>Projeto 7</h2>
+                <p>LogoYoga freelancer</p>
+                <img src="img/Logo_YOGA.png" alt="Imagem 2">
+        </div>
+    </div>
+    <div class="project">
+        <div class="project-info">
+            <h2>Projeto 8</h2>
+            <p>Logo: Sonho de cabelo</p>
+            <img src="img/LogoHairDream.png" alt="Imagem 2">
+    </div>
+</div>
+<div class="project">
+    <div class="project-info">  
+        <h2>Projeto 9</h2>
+        <p>Projeto feito no Gimp</p>
+        <img src="img/ICONmelhorado.png" alt="Imagem 2">
+</div>
+</div> 
+<div class="project">
+    <div class="project-info">
+        <h2>Projeto 10</h2>
+        <p>Logo salão de beleza</p>
+        <img src="  img/E.png" alt="Imagem 2">
+</div>                        
+</div>
+<div class="project">
+    <div class="project-info">
+        <h2>Projeto 11</h2>
+        <p>Life to the unborn </p>
+        <img src="img/born heavyweight_2.0.png" alt="Imagem 11">
+</div>
+</div>
+</main>
+
+
+
+
+<div class="container">
+    <video src="videos/DreamHair Logo.mp4" class="slider" autoplay muted controls></video>
+
+    <ul>
+        <li onclick="videoslider('./videos/DreamHair Logo.mp4')"><video src="videos/DreamHair Logo.mp4"></video></li>
+        <li onclick="videoslider('./videos/E.mp4')"><video src="videos/E.mp4"></video></li>
+    </ul>
+</div>
+
+<script>
+    function videoslider(links) {
+        document.querySelector(".slider").src =links;
+    }
+    
+    </script>
+    
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="rodape">
+            <h1>Que tal?<h1>
+                <button class="button-request-design" onclick="toggleForm()">Solicitar Design</button>
+
+   <p></p>
+    <!-- Novo formulário de contato --> 
+    
+        <section id="designForm">
+            <h1>Preecha o formulário para solicitar um Design:</h1>
+            <form action="https://api.staticforms.xyz/submit" method="post">
+                <label>Nome</label>
+                <input type="text" name="name" placeholder="Digite seu nome" autocomplete="off" required></label>
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Digite seu email" autocomplete="off" required>
+                <label>Descrição do design:</label>
+                <textarea name="message" id="" cols="30" rows="10" placeholder="Digite sua Mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+
+                <input type="hidden" name="accessKey"  value="294cf185-305b-4692-9ec2-f28d0a7298ef">
+                <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/teste/obrigado.html">
+            </form>
+        </section>
+    </div>
+</footer>
+</main>
+</body>
+</html>

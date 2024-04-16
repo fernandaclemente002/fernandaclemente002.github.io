@@ -1,0 +1,353 @@
+body {
+    background-color: #ffffff; /* Cor de fundo para o tema claro */
+    color: black; /* Cor das letras para o tema claro */
+    font-family: Arial, sans-serif;
+    margin: 60px 0 0; /* Adicionando margem superior de 60px */
+    padding-top: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    text-align: center;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centraliza o texto horizontalmente */
+}
+
+.nav-links li {
+    display: inline;
+    display: inline-block; /* Mantém os itens da lista em linha */
+    margin: 0 15px; /* Adiciona um espaçamento horizontal entre os itens */
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%; /* faz com que a logo fique em formato redondo e responsivo */
+    display: block;
+    margin: 50px auto; /* espaçamento entre o texto e a logo */
+}
+
+.card-container {
+    display: flex; /* Torna o contêiner flexível */
+    justify-content: space-between; /* Distribui o espaço horizontalmente entre os cards */
+    flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha se não houver espaço suficiente */
+}
+
+.card {
+    width: 300px;
+    height: 200px; /* Defina uma altura fixa para os cards */
+    border: 1px solid #ddd;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; /* Para evitar que imagens maiores distorçam o layout */
+}
+
+.card img {
+    max-width: 100%; /* Ajusta a largura da imagem para preencher o container */
+    max-height: 100%; /* Ajusta a altura da imagem para preencher o container */
+    object-fit: cover; /* Mantém a proporção da imagem sem distorção */
+}
+
+.card p {
+    margin-top: 10px; /* Espaçamento entre a imagem e o texto */
+}
+
+.card:last-child {
+    margin-right: 0;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.frontend-container {
+    margin: 20px auto; /* Centralizar o container */
+    width: 80%; /* Ajustar a largura conforme desejado */
+}
+
+.dark-theme {
+    background-color: #333333; /* Cor de fundo para o tema escuro */
+    color: pink; /* Cor das letras para o tema escuro */
+}
+
+.navbar {
+    background-color: #e75faace; /* cor de fundo da tira */
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-links li a {
+    display: inline-block;
+    color: rgba(0, 1, 14, 0.863); /* cor do texto dentro da tira */
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.nav-links li a:hover {
+    background-color: #da016da6;  /* cor selecionada */
+    color: rgb(10, 21, 167); /* cor do texto selecionado*/
+}
+
+.container {
+    width: 99%; /* faz com que os containers fiquem um do lado do outro */
+    margin: auto;
+}
+
+.card-container {
+    display: flex; /* Mantém o contêiner flexível */
+    justify-content: center; /* Centraliza os cards horizontalmente */
+    flex-wrap: nowrap; /* Impede que os cards quebrem para a próxima linha */
+    overflow-x: auto; /* Adiciona uma barra de rolagem horizontal se necessário */
+}
+
+.card {
+    width: 230px; /* Reduz a largura para caber mais cards */
+    height: 240px; /* Ajusta a altura proporcionalmente */
+    border: 1px solid #880a73;
+    padding: 10px;
+    margin: 20px; /* Reduz a margem entre os cards para maximizar o espaço */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; /* Para evitar que imagens maiores distorçam o layout */
+    transition: transform 0.3s ease;
+    background-size: cover; /* Garante que a imagem de fundo cubra todo o container */
+    background-position: center; /* Centraliza a imagem de fundo */
+    color: rgb(37, 4, 156); /* Cor do texto dentro do card */
+}
+
+.card:nth-child(1) {
+    background-image: url('src/LEMAT\ WORKS.gif')/* pelo caminho da sua imagem */
+}
+
+.card:nth-child(2) {
+    background-image: url('src/star.gif'); /* Substitua 'caminho/para/sua/imagem2.jpg' pelo caminho da sua imagem */
+}
+
+.card:nth-child(3) {
+    background-image: url('src/LEMAT\ WORKS.gif'); /* Substitua 'caminho/para/sua/imagem3.jpg' pelo caminho da sua imagem */
+}
+
+.card .card-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.card .card-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+    }
+}
+
+.botao-soft {
+    background-color: #ffffff;
+    color: #333333;
+    border: 2px solid #333333;
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 5px; /* Ajuste para mais se necessário */
+    margin-bottom: 5px; /* Espaço na parte inferior */
+    margin-left: auto; /* Move o botão para a direita */
+    margin-right: 20px; /* Adiciona um espaçamento à direita */
+}
+
+.botao-soft:hover {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.botao-direita {
+    float: right;
+}
+
+.form-label-left,
+.form-label-right,
+.form-html,
+.form-checkbox-item label,
+.form-radio-item label,
+span.FITB .qb-checkbox-label,
+span.FITB .qb-radiobox-label,
+span.FITB .form-radio label,
+span.FITB .form-checkbox label,
+[data-blotid][data-type=checkbox] [data-labelid],
+[data-blotid][data-type=radiobox] [data-labelid],
+span.FITB-inptCont[data-type=checkbox] label,
+span.FITB-inptCont[data-type=radiobox] label {
+    color: rgb(204, 37, 37);
+}
+
+.form-sub-label {
+    color: #8a0a3f;
+}
+
+.supernova {
+    background-color: transparent;
+}
+
+.supernova body {
+    background: transparent;
+}
+
+.form-textbox,
+.form-textarea,
+.form-dropdown,
+.form-radio-other-input,
+.form-checkbox-other-input,
+.form-captcha input,
+.form-spinner input {
+    background-color: transparent;
+}
+
+.form-all {
+    background-image: none;
+}
+
+/* Novo código CSS para o formulário */
+.jotform-form {
+    margin-top: 50px; /* Ajuste a margem superior conforme necessário */
+    margin-left: auto; /* Centraliza o formulário horizontalmente */
+    margin-right: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5); /* Cor de fundo transparente */
+    box-shadow: 0 0 10px rgba(175, 16, 16, 0.1);
+    max-width: 800px; /* Define a largura máxima do container do formulário */
+}
+
+.form-section {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.form-section li {
+    margin-bottom: 20px; /* Espaçamento entre as seções do formulário */
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.form-textbox,
+.form-textarea,
+.form-dropdown,
+.form-radio-other-input,
+.form-checkbox-other-input,
+.form-captcha input,
+.form-spinner input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #4c075e;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.form-submit-button {
+    background-color: #ff00aa; /* Cor de fundo do botão de envio */
+    color: #fff; /* Cor do texto do botão de envio */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-submit-button:hover {
+    background-color: #31087e; /* Cor de fundo do botão de envio ao passar o mouse */
+}
+
+.form-required {
+    color: rgb(201, 5, 103); /* Cor do asterisco para campos obrigatórios */
+}
+
+.form-radio-item,
+.form-checkbox-item {
+    margin-bottom: 10px; /* Espaçamento entre os itens de seleção de rádio e caixa de seleção */
+}
+
+.form-error-message {
+    color: rgb(190, 18, 133); /* Cor do texto de mensagem de erro */
+    margin-top: 5px;
+}
+
+
+#contatar {
+    margin-top: 60px; /* Adiciona espaço acima do formulário */
+    margin-bottom: 0px; /* Adiciona espaço abaixo do formulário */
+    padding: 20px;
+    border: 1px solid #0b5383; /* Adiciona uma borda ao redor do formulário */
+    border-radius: 10px;
+    background-color: #eb0994af;
+    box-shadow: 0 0 10px rgba(150, 4, 4, 0.1);
+    max-width: 930px; /* Define a largura máxima do formulário */
+    margin-left: auto; /* Centraliza o formulário horizontalmente */
+    margin-right: auto;
+    background-image: url('src/CNN\ —\ Pink.gif');
+    background-position: right center; /* Posiciona a imagem no centro da margem direita */
+    background-repeat: no-repeat; /* Evita que a imagem se repita na margem */
+    background-size: cover; /* Ajusta a imagem para cobrir toda a margem */
+
+}
+#contatar label,
+#contatar input[type="text"],
+#contatar textarea,
+#contatar select {
+    color: #b60457; /* Define a cor do texto dentro do formulário */
+}
+
+.light-theme #themeButton {
+    background-color: #ffffff; /* Cor do botão no tema claro */
+    color: #333333; /* Cor do texto do botão no tema claro */
+}
+
+.dark-theme #themeButton {
+    background-color: #000000; /* Cor do botão no tema escuro */
+    color: #ffffff; /* Cor do texto do botão no tema escuro */
+}
+
+

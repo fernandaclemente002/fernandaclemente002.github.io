@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos Front-end</title>
+    <link rel="stylesheet" href="front.css"> <!-- Arquivo CSS com estilos -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+    /* CSS do seu projeto */
+    body {
+        font-family: 'Montserrat', sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0 20px;
+        border: 35px solid #0c1adf; /* Adiciona uma borda de 10 pixels sólida preta */
+        position: relative; /* Necessário para posicionar o elemento de animação */
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: calc(100vh - 70px); /* Leva em consideração a altura da borda */
+        overflow-x: auto; /* Adiciona uma barra de rolagem horizontal */
+    }
+
+    .bola {
+        position: absolute; /* Necessário para posicionar a bola dentro da borda */
+        width: 20px; /* Ajuste conforme necessário */
+        height: 20px; /* Ajuste conforme necessário */
+        background-color: #ee189c; /* Cor da bola */
+        border-radius: 50%; /* Faz a bola ser circular */
+        top: calc(100% - 70px); /* Começa na borda inferior */
+        left: 0; /* Começa na borda esquerda */
+        animation: borderAnimation 5s linear infinite; /* Aplica a mesma animação à bola */
+    }
+
+    .card {
+    background-color: rgba(24, 6, 189, 0.301); /* Define um fundo transparente com uma opacidade */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(34, 5, 197, 0.356);
+    overflow: hidden;
+    width: 300px;
+    margin-right: 10px; /* Adiciona uma margem à direita para separar os cards */
+}
+
+
+    .card img {
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid #160894;
+    }
+
+    .card-content {
+        padding: 20px;
+    }
+
+    .card-content h2 {
+        margin-top: 0;
+        font-size: 24px;
+        color: #e20b77;
+    }
+
+    .card-content p {
+        color: #0aaddf;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #ee189c;
+        color: #fcfffe;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        margin-top: 10px; /* Adiciona margem superior para separar o botão do conteúdo */
+    }
+
+    .button:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+</head>
+<body>
+    <div class="bola"></div> <!-- Bola para a animação -->
+    <div class="container">
+        <div class="card">
+            <img src="src/CSS3.png" alt="Projeto Frontend">
+            <div class="card-content">
+                <h2>Projeto CSS</h2>
+                <p>Esta é uma prévia de um projeto CSS criado utilizando HTML, CSS e possivelmente JavaScript. </p>
+                <div class="galeria css" style="display: none;">
+                    <!-- Galeria do projeto CSS -->
+                    <div class="projeto-item">
+                        <video controls width="100%">
+                            <source src="videos/p1.mp4" type="video/mp4">
+                            Seu navegador não suporta o elemento de vídeo.
+                        </video>
+                        <p></p>
+                        <video controls width="100%">
+                            <source src="videos/p2.mp4" type="video/mp4">
+                            Seu navegador não suporta o elemento de vídeo.
+                        </video>
+                        <video controls width="100%">
+                            <source src="videos/p3.mp4" type="video/mp4">
+                            Seu navegador não suporta o elemento de vídeo.
+                        </video>
+                        
+                    </div>
+                </div>
+                <a href="#" class="button ver-mais" data-projeto="css">Ver mais</a>
+            </div>
+        </div>
+
+        <!-- Novos cards -->
+        <div class="card">
+            <img src="src/figma.png" alt="Projeto Figma">
+            <div class="card-content">
+                <h2>Projeto Figma</h2>
+                <p>Esta é uma prévia de um projeto criado utilizando a ferramenta de design Figma. </p>
+                <div class="galeria figma" style="display: none;">
+                    <!-- Galeria do projeto Figma -->
+                    <div class="projeto-item">
+                        <p></p>
+                        <img src="src/comunidade_cidada.png" alt="Projeto Figma 1">
+                    </div>
+                    <div class="projeto-item">
+                        <img src="src/cc.png" alt="Projeto Figma 2">
+                        <h3>Protótipo feito para feira de ciências:</h3>
+                    </div>
+                    <div class="projeto-item">
+                        <video controls  width="100%" >
+                        <source src="videos/front.mp4" type="video/mp4">
+                       
+                            Seu navegador não suporta o elemento de vídeo.
+                         </video>
+                    </div>
+                </div>
+                <a href="#" class="button ver-mais" data-projeto="figma">Ver mais</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="src/xml.png" alt="Projeto XML">
+            <div class="card-content">
+                <h2>Projeto XML</h2>
+                <p>Esta é uma prévia de um projeto que envolve a manipulação de dados em formato XML.</p>
+                <div class="galeria xml" style="display: none;">
+                    <!-- Galeria do projeto XML -->
+                    <div class="projeto-item">
+                        <p></p>
+                        <h3>Projeto XML gerenciador de tarefas:</h3>
+                        <img src="src/xml0.png" alt="Projeto XML 1">
+                    </div>
+                    <div class="projeto-item">
+                        <img src="src/xml1.png" alt="Projeto XML 2">
+                       
+                    </div>
+                    <div class="projeto-item">
+                        <img src="src/xml2.png" alt="Projeto XML 2">
+                       
+                    </div>
+                    <div class="projeto-item">
+                        <img src="src/xml3.png" alt="Projeto XML 2">
+                       
+                    </div>
+                </div>
+                <a href="#" class="button ver-mais" data-projeto="xml">Ver mais</a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const verMaisButtons = document.querySelectorAll('.ver-mais');
+    
+            verMaisButtons.forEach(button => {
+                button.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const projeto = this.getAttribute('data-projeto');
+                    const galeria = document.querySelector(`.galeria.${projeto}`);
+                    const buttonText = this.textContent;
+    
+                    if (galeria) {
+                        if (galeria.style.display === 'none' || galeria.style.display === '') {
+                            galeria.style.display = 'block';
+                            this.textContent = 'Ver menos';
+                        } else {
+                            galeria.style.display = 'none';
+                            this.textContent = 'Ver mais';
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+   <style>
+    /* CSS do seu projeto */
+    body {
+        font-family: 'Montserrat', sans-serif;
+       
+        margin: 0;
+        padding: 0 20px;
+        border: 35px solid rgba(51, 10, 201, 0.137); /* Adiciona uma borda transparente com uma leve cor */
+        position: relative; /* Necessário para posicionar o elemento de animação */
+    }
+    
+    .container {
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start; /* Alterado para permitir que a rolagem vá até o topo */
+        min-height: 100vh; /* Alterado para min-height para garantir que o conteúdo seja exibido */
+        padding-top: 70px; /* Adicionado para compensar a altura da bola */
+    }
+
+    .bola {
+        position: absolute; /* Necessário para posicionar a bola dentro da borda */
+        width: 20px; /* Ajuste conforme necessário */
+        height: 20px; /* Ajuste conforme necessário */
+        background-color: #ee189c; /* Cor da bola */
+        border-radius: 50%; /* Faz a bola ser circular */
+        top: calc(50% - 10px); /* Centraliza verticalmente */
+        left: 0; /* Começa na borda esquerda */
+        animation: borderAnimation 5s linear infinite; /* Aplica a mesma animação à bola */
+    }
+
+    /* Estilos adicionais aqui... */
+</style>
+</body>
+</html>

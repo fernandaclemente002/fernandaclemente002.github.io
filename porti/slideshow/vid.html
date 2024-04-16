@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="vid.css">
+</head>
+<body>
+    
+
+<div class="container">
+<video src="videos/Logo1.0FInalizada.mp4" class="slider" autoplay muted controls></video>
+
+<ul>
+    <li onclick="videoslider('./videos/Logo1.0FInalizada.mp4')"><video src="videos/Logo1.0FInalizada.mp4"></video></li>
+    <li onclick="videoslider('./videos/DreamHair Logo.mp4')"><video src="videos/DreamHair Logo.mp4"></video></li>
+    <li onclick="videoslider('./videos/E.mp4')"><video src="videos/E.mp4"></video></li>
+</ul>
+</div>
+
+<script>
+function videoslider(links) {
+    document.querySelector(".slider").src =links;
+}
+
+</script>
+
+</body>
+</html>

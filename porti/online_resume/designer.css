@@ -1,0 +1,168 @@
+/* Estilos gerais */
+    body {
+       
+        margin: 0;
+        padding: 0;
+        color: #412ac2b2; /* Cor das letras da página */
+        align-items: center;
+        background: #f5169fd5;
+        text-align: center; 
+        font-family: 'Montserrat', sans-serif;
+        box-sizing: border-box;
+        min-height: 100vh;
+        background:url('src/kacos.gif');
+        background-size: cover; /* Ajusta a imagem para cobrir todo o fundo */
+        background-position: center; /* Centraliza a imagem no fundo */
+       
+    }
+
+/* Carrosel */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os projetos sejam distribuídos em várias linhas */
+    justify-content: center; /* Centraliza os projetos horizontalmente */
+    gap: 20px; /* Espaçamento entre os projetos */
+}
+
+.project {
+    width: calc(33.33% - 20px); /* Largura do projeto (1/3 da largura do contêiner menos o espaçamento entre os projetos) */
+    margin-bottom: 20px; /* Espaçamento inferior entre os projetos */
+    box-sizing: border-box; /* Garante que a largura inclua o preenchimento e a borda */
+}
+
+.project-info {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.project-info img {
+    width: 100%;
+    height: auto;
+    cursor: pointer; /* Muda o cursor para indicar que a imagem é clicável */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave ao expandir a imagem */
+    filter: blur(10px); /* Aplica um filtro de desfoque inicialmente */
+}
+
+.project-info img.expanded {
+    transform: scale(1.1); /* Aumenta o tamanho da imagem quando expandida */
+    filter: none; /* Remove o filtro quando a imagem é expandida */
+}
+
+
+.container-video-carousel video {
+    max-width: 100%; /* Definindo largura máxima para os vídeos */
+    height: auto; /* Mantendo a proporção original */
+}
+
+/* Estilo para o título com animação de brilho */
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #1e04b1b2; /* Cor original do título */
+    animation: brilho 2s infinite alternate; /* Adiciona a animação de brilho */
+}
+
+/* Definição da animação de brilho */
+@keyframes brilho {
+    0% {
+        color: #0e12d1d0; /* Cor original */
+    }
+    100% {
+        color: #fcf8ff; /* Cor brilhante */
+    }
+}
+
+#designForm {
+    display: none; /* Esconder o formulário por padrão */
+}
+.show-form {
+    display: block; /* Exibir o formulário quando a classe for aplicada */
+}
+
+
+/* Estilo para botão pedir design*/
+.button-request-design {
+    padding: 15px 25px;
+    background-color: #faf3f7; /* Cor de fundo do botão */
+    color: rgb(0, 0, 3); /* Cor do texto do botão */
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-request-design:hover {
+    background-color: #080002fb; /* Cor de fundo do botão ao passar o mouse */
+    color: rgb(255, 255, 255); /* Cor do texto do botão */
+}
+
+
+/* Estilo para o formulRIO */
+section{
+    display: flex;
+    align-items: center;
+    justify-content:  center;
+    flex-direction: column;
+    padding: 10px 40px;
+    background: #1d1d2e;
+    width: 500px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    margin: 0 auto; /* Adicionando margem automática nas laterais */
+}
+section h2 {
+    color: #f5f5f5;
+    font-size: 2.5rem;
+    margin: 2rem;
+}
+section form {
+display: flex;
+flex-direction: column;
+width: 100%;
+}
+form label{
+color: #f5f5f5 ;
+font-size: 17px;
+margin-bottom: 4px ;
+}
+form input{
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 0px solid #4c075e;
+    border-radius: 15px;
+    outline: none;
+    font-size: 15px;
+    transition: all 0.5s;
+}
+form input:focus{
+border-radius: 16px;
+}
+form textarea{
+    padding: 10px;
+    outline: none;
+    border: 0px solid #072a5e;
+    font-size: 15px;
+    margin-bottom: 30px;
+    transition: all 0.5s;
+}
+
+form textarea:focus{
+border-radius: 16px;
+}
+form button{
+    padding: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    background: transparent;
+    margin-bottom: 20px;
+}
+form button:hover{
+background: #f5f5f5;
+color: #101026;
+border-radius: 16px;
+}
+
+
+

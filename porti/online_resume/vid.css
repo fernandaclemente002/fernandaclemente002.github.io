@@ -1,0 +1,80 @@
+*{
+margin: 10;
+padding: 0;
+box-sizing: border-box;
+
+}
+
+
+.container{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 550px;
+    
+    
+    }
+
+.container .slider{
+position: absolute;
+top: 50%; /* Posicionamento vertical no meio */
+left: 50%;  /* Posicionamento horizontal no meio */
+width: 100%;
+height: 100%;
+transform: translate(-50%, -50%); /* Centralização absoluta */
+max-width: 100%; /* Garante que o vídeo não ultrapasse a largura do contêiner */
+}
+
+.container ul{
+    position: absolute; /* Alterado para absolute */
+    bottom: -230px; /* Posicionado na parte inferior da janela */
+    left: 50%; /* Posicionado horizontalmente no meio */
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+.container ul li{
+    margin: 10px; /* Adicione uma margem ao redor de cada item do carrossel */
+    margin-right: 20px; /* Adicione espaço extra à direita para separar os itens */
+}
+.container ul li:last-child {
+    margin-right: 0; /* Remova a margem extra do último item para manter a consistência */
+}
+
+
+.container ul li video {
+    width: 200px;
+    height: auto;
+    transition: 0.3s;
+    position: relative; /* Adicionado */
+    z-index: 1; /* Adicionado */
+}
+
+
+.container ul li video:hover{
+    transition: scale (1.1);
+}
+
+video{
+width: 100%;
+height: 100%;
+}
+footer {
+    margin-top: 195px; /* Adiciona um espaçamento entre os botões do slide e o texto "Que tal" */
+}
+
+.rodape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #1d1d2e;
+    width: 100%;
+    padding: 20px;
+}
+
